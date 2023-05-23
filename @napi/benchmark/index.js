@@ -252,6 +252,7 @@ if (!nativeBinding) {
   throw new Error(`Failed to load native binding`)
 }
 
-const { stringify } = nativeBinding
+const { jsonStringify, base64Encode } = nativeBinding
 
-module.exports.stringify = stringify
+module.exports.jsonStringify = jsonStringify
+module.exports.base64Encode = base64Encode
