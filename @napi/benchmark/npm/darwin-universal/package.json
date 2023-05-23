@@ -1,0 +1,15 @@
+{
+  "name": "stringify-darwin-universal",
+  "version": "0.0.0",
+  "os": [
+    "darwin"
+  ],
+  "main": "stringify.darwin-universal.node",
+  "files": [
+    "stringify.darwin-universal.node"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">= 10"
+  }
+}
