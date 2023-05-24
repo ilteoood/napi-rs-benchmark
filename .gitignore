@@ -3,3 +3,4 @@
 .yarn/install-state.gz
 
 node_modules
+yarn.lock

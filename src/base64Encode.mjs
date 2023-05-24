@@ -5,7 +5,7 @@ import { base64Encode } from '../@napi/benchmark/index.js';
 import { resultComparator } from './resultComparator.mjs';
 
 export const base64EncodeTest = async () => {
-    for (let i = 0; i< 10 ; i++) {
+    for (let i = 0; i < 10; i++) {
         const word = randomUUID();
 
         const bench = new Bench({ time: 1000 });
