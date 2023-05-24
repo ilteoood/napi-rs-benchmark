@@ -1,6 +1,7 @@
 import { Bench } from 'tinybench';
 
 import { jsonStringify } from '../@napi/benchmark/index.js';
+import { resultComparator } from './resultComparator.mjs';
 
 const SIZES = [1, 10, 100, 1000, 10_000, 100_000, 1_000_000]
 
@@ -19,7 +20,7 @@ export const jsonStringifyTest = async () => {
 
         await bench.run();
 
-        console.log(`Same result: ${rustResult === jsResult}`);
+        resultComparator(rustResult, jsResult);
 
         console.table(bench.table());
     }

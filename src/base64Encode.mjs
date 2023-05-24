@@ -2,6 +2,7 @@ import { randomUUID } from 'crypto';
 import { Bench } from 'tinybench';
 
 import { base64Encode } from '../@napi/benchmark/index.js';
+import { resultComparator } from './resultComparator.mjs';
 
 export const base64EncodeTest = async () => {
     for (let i = 0; i< 10 ; i++) {
@@ -17,7 +18,7 @@ export const base64EncodeTest = async () => {
 
         await bench.run();
 
-        console.log(`Same result: ${rustResult === jsResult}`);
+        resultComparator(rustResult, jsResult);
 
         console.table(bench.table());
     }
