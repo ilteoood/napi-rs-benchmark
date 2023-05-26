@@ -6,3 +6,14 @@
 export function jsonStringify(array: Array<number>): string
 export function base64Encode(toEncode: string): string
 export function arraySum(array: Array<number>): number
+export interface Parsed {
+  scheme: string
+  userinfo: string
+  host: string
+  port: number
+  path: string
+  query: string
+  fragment: string
+  reference: string
+}
+export function uriParse(uri: string): Parsed

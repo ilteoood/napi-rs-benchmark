@@ -1,11 +1,6 @@
-export const resultComparator = (rustResult, jsResult, wasmResult) => {
-    const sameResult = rustResult === jsResult && jsResult === wasmResult
-    console.log(`Same result: ${sameResult}`)
+import assert from 'assert'
 
-    if(!sameResult) {
-        console.log(`Rust result: ${rustResult}`)
-        console.log(`JS result: ${jsResult}`)
-        console.log(`WASM result: ${wasmResult}`)
-        throw new Error('Results does not match')
-    }
+export const resultComparator = (rustResult, jsResult, wasmResult) => {
+    assert.deepEqual(rustResult, jsResult, `rustResult !== jsResult`)
+    assert.deepEqual(jsResult, wasmResult, `jsResult !== wasmResult`)
 }

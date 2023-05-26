@@ -16,7 +16,7 @@ export const jsonStringifyTest = async () => {
         let rustResult, jsResult, wasmResult;
 
         bench
-            .add(`Rust stringify ${size}`, () => rustResult = jsonStringify(array))
+            .add(`NAPI stringify ${size}`, () => rustResult = jsonStringify(array))
             .add(`JSON stringify ${size}`, () => jsResult = JSON.stringify(array))
             .add(`WASM stringify ${size}`, () => wasmResult = wasm.json_stringify(array))
 

@@ -14,7 +14,7 @@ export const base64EncodeTest = async () => {
         let rustResult, jsResult, wasmResult;
 
         bench
-            .add(`Rust base64 encode`, () => rustResult = base64Encode(word))
+            .add(`NAPI base64 encode`, () => rustResult = base64Encode(word))
             .add(`JS base64 encode`, () => jsResult = Buffer.from(word).toString('base64'))
             .add(`WASM base64 encode`, () => wasmResult = wasm.base64_encode(word))
 

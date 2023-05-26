@@ -252,8 +252,9 @@ if (!nativeBinding) {
   throw new Error(`Failed to load native binding`)
 }
 
-const { jsonStringify, base64Encode, arraySum } = nativeBinding
+const { jsonStringify, base64Encode, arraySum, uriParse } = nativeBinding
 
 module.exports.jsonStringify = jsonStringify
 module.exports.base64Encode = base64Encode
 module.exports.arraySum = arraySum
+module.exports.uriParse = uriParse

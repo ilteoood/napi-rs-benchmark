@@ -16,8 +16,8 @@ export const arraySumTest = async () => {
         let rustResult, jsResult, wasmResult;
 
         bench
-            .add(`Rust array sum ${size}`, () => rustResult = arraySum(array))
-            .add(`JSON array sum ${size}`, () => jsResult = array.reduce((a, b) => a + b, 0))
+            .add(`NAPI array sum ${size}`, () => rustResult = arraySum(array))
+            .add(`JS array sum ${size}`, () => jsResult = array.reduce((a, b) => a + b, 0))
             .add(`WASM array sum ${size}`, () => wasmResult = wasm.array_sum(array))
 
         await bench.run();
