@@ -1,3 +1,4 @@
+import esMain from 'es-main';
 import fastUri from 'fast-uri';
 import { Bench } from 'tinybench';
 
@@ -23,4 +24,8 @@ export const fastUriTest = async () => {
 
         console.table(bench.table());
     }
+}
+
+if (esMain(import.meta)) {
+    fastUriTest();
 }

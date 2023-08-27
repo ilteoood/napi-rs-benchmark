@@ -1,3 +1,4 @@
+import esMain from 'es-main';
 import { Bench } from 'tinybench';
 
 import { arraySum } from '../@napi/benchmark/index.js';
@@ -26,4 +27,8 @@ export const arraySumTest = async () => {
 
         console.table(bench.table());
     }
+}
+
+if (esMain(import.meta)) {
+    arraySumTest();
 }

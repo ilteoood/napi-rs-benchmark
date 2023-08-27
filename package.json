@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./src/index.mjs"
+    "benchmark:all": "node ./src/index.mjs",
+    "benchmark:arraySum": "node ./src/arraySum.mjs",
+    "benchmark:base64Encode": "node ./src/base64Encode.mjs",
+    "benchmark:fastUri": "node ./src/fastUri.mjs",
+    "benchmark:jsonStringify": "node ./src/jsonStringify.mjs"
   },
   "workspaces": [
     "@napi/benchmark",
@@ -14,6 +18,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "es-main": "^1.2.0",
     "fast-uri": "^2.2.0",
     "tinybench": "^2.5.0"
   },

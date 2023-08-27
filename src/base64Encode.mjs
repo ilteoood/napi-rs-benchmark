@@ -1,4 +1,5 @@
 import { randomUUID } from 'crypto';
+import esMain from 'es-main';
 import { Bench } from 'tinybench';
 
 import { base64Encode } from '../@napi/benchmark/index.js';
@@ -24,4 +25,8 @@ export const base64EncodeTest = async () => {
 
         console.table(bench.table());
     }
+}
+
+if (esMain(import.meta)) {
+    base64EncodeTest();
 }
