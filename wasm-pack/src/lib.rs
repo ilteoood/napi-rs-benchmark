@@ -47,16 +47,18 @@ pub struct Parsed {
 pub fn uri_parse(uri: &str) -> Parsed {
     let parsed_url = Url::parse(uri).unwrap();
 
-    let userinfo = [parsed_url.username(), parsed_url.password().unwrap()].join(":");
-
     Parsed {
-        scheme: parsed_url.scheme().to_string(),
-        userinfo,
-        host: parsed_url.host_str().unwrap().to_string(),
+        scheme: parsed_url.scheme().to_owned(),
+        userinfo: format!(
+            "{}:{}",
+            parsed_url.username(),
+            parsed_url.password().unwrap()
+        ),
+        host: parsed_url.host_str().unwrap().to_owned(),
         port: parsed_url.port().unwrap(),
-        path: parsed_url.path().to_string(),
-        query: parsed_url.query().unwrap().to_string(),
-        fragment: parsed_url.fragment().unwrap().to_string(),
+        path: parsed_url.path().to_owned(),
+        query: parsed_url.query().unwrap().to_owned(),
+        fragment: parsed_url.fragment().unwrap().to_owned(),
         reference: String::from("uri"),
     }
 }
