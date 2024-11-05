@@ -41,7 +41,7 @@ pub struct Parsed {
 
 #[napi]
 pub fn uri_parse(uri: String) -> Parsed {
-  let parsed_url = Url::parse(uri.as_str()).unwrap();
+  let parsed_url = Url::parse(&uri).unwrap();
 
   Parsed {
     scheme: parsed_url.scheme().to_owned(),
