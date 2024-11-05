@@ -8,7 +8,10 @@
     "benchmark:arraySum": "node ./src/arraySum.mjs",
     "benchmark:base64Encode": "node ./src/base64Encode.mjs",
     "benchmark:fastUri": "node ./src/fastUri.mjs",
-    "benchmark:jsonStringify": "node ./src/jsonStringify.mjs"
+    "benchmark:jsonStringify": "node ./src/jsonStringify.mjs",
+    "build:wasm": "cd ./wasm-pack && wasm-pack build -t nodejs --release && cd ..",
+    "build:napi": "cd ./@napi/benchmark && yarn build && cd ..",
+    "build:all": "yarn build:wasm && yarn build:napi"
   },
   "workspaces": [
     "@napi/benchmark",
@@ -20,7 +23,8 @@
   "dependencies": {
     "es-main": "^1.2.0",
     "fast-uri": "^2.2.0",
-    "tinybench": "^2.5.0"
+    "tinybench": "^2.5.0",
+    "wasm-pack": "^0.13.1"
   },
   "packageManager": "yarn@3.5.1"
 }
