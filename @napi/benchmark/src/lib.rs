@@ -3,7 +3,7 @@
 #[macro_use]
 extern crate napi_derive;
 
-use base64::{engine::general_purpose, Engine as _};
+use base64::prelude::*;
 use url::Url;
 
 #[napi]
@@ -13,11 +13,7 @@ pub fn json_stringify(array: Vec<u32>) -> String {
 
 #[napi]
 pub fn base64_encode(to_encode: String) -> String {
-  let mut buf = String::new();
-
-  general_purpose::STANDARD.encode_string(&to_encode, &mut buf);
-
-  buf
+  BASE64_STANDARD.encode(to_encode)
 }
 
 #[napi]
