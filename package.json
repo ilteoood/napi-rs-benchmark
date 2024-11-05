@@ -21,7 +21,9 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@node-rs/jsonwebtoken": "^0.5.7",
     "es-main": "^1.3.0",
+    "fast-jwt": "^4.0.5",
     "fast-uri": "^3.0.3",
     "tinybench": "^3.0.3",
     "wasm-pack": "^0.13.1"
