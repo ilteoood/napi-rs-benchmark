@@ -9,6 +9,7 @@
     "benchmark:base64Encode": "node ./src/base64Encode.mjs",
     "benchmark:fastUri": "node ./src/fastUri.mjs",
     "benchmark:jsonStringify": "node ./src/jsonStringify.mjs",
+    "benchmark:fibonacci": "node ./src/fibonacci.mjs",
     "build:wasm": "cd ./wasm-pack && wasm-pack build -t nodejs --release && cd ..",
     "build:napi": "cd ./@napi/benchmark && yarn build && cd ..",
     "build:all": "yarn build:wasm && yarn build:napi"

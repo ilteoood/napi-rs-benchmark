@@ -17,3 +17,4 @@ export interface Parsed {
   reference: string
 }
 export declare function uriParse(uri: string): Parsed
+export declare function fibonacci(n: number): number
