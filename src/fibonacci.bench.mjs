@@ -9,7 +9,7 @@ const jsFibonacci = (n) => {
     return jsFibonacci(n - 1) + jsFibonacci(n - 2);
 }
 
-const NUMBERS = [1, 10];
+const NUMBERS = Array.from({ length: 20 }, (_, i) => i + 1);
 
 for (const number of NUMBERS) {
   describe(`fibonacci benchmark ${number}`, () => {
