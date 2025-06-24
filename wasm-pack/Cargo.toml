@@ -11,5 +11,5 @@ crate-type = ["cdylib"]
 [dependencies]
 base64 = "0.22.1"
 serde_json = "*"
-url = "2.5.3"
+url = "2.5.4"
 wasm-bindgen = "0.2"
