@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "benchmark:all": "node ./src/index.mjs",
-    "benchmark:arraySum": "node ./src/arraySum.mjs",
-    "benchmark:base64Encode": "node ./src/base64Encode.mjs",
-    "benchmark:fastUri": "node ./src/fastUri.mjs",
-    "benchmark:jsonStringify": "node ./src/jsonStringify.mjs",
-    "benchmark:fibonacci": "node ./src/fibonacci.mjs",
+    "benchmark:all": "vitest bench",
+    "benchmark:arraySum": "vitest bench ./src/arraySum.bench.mjs",
+    "benchmark:base64Encode": "vitest bench ./src/base64Encode.bench.mjs",
+    "benchmark:fastUri": "vitest bench ./src/fastUri.bench.mjs",
+    "benchmark:jsonStringify": "vitest bench ./src/jsonStringify.bench.mjs",
+    "benchmark:fibonacci": "vitest bench ./src/fibonacci.bench.mjs",
     "build:wasm": "cd ./wasm-pack && wasm-pack build -t nodejs --release && cd ..",
     "build:napi": "cd ./@napi/benchmark && yarn build && cd ..",
     "build:all": "yarn build:wasm && yarn build:napi"
@@ -27,6 +27,7 @@
     "fast-jwt": "^6.0.2",
     "fast-uri": "^3.0.6",
     "tinybench": "^4.0.1",
+    "vitest": "^3.2.4",
     "wasm-pack": "^0.13.1"
   },
   "packageManager": "yarn@3.5.1"
