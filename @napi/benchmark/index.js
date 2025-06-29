@@ -310,10 +310,11 @@ if (!nativeBinding) {
   throw new Error(`Failed to load native binding`)
 }
 
-const { jsonStringify, base64Encode, arraySum, uriParse, fibonacci } = nativeBinding
+const { jsonStringify, base64Encode, arraySum, uriParse, fibonacci, noop } = nativeBinding
 
 module.exports.jsonStringify = jsonStringify
 module.exports.base64Encode = base64Encode
 module.exports.arraySum = arraySum
 module.exports.uriParse = uriParse
 module.exports.fibonacci = fibonacci
+module.exports.noop = noop

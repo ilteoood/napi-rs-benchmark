@@ -10,6 +10,7 @@
     "benchmark:fastUri": "vitest bench ./src/fastUri.bench.mjs",
     "benchmark:jsonStringify": "vitest bench ./src/jsonStringify.bench.mjs",
     "benchmark:fibonacci": "vitest bench ./src/fibonacci.bench.mjs",
+    "benchmark:noop": "vitest bench ./src/noop.bench.mjs",
     "build:wasm": "cd ./wasm-pack && wasm-pack build -t nodejs --release && cd ..",
     "build:napi": "cd ./@napi/benchmark && yarn build && cd ..",
     "build:all": "yarn build:wasm && yarn build:napi"

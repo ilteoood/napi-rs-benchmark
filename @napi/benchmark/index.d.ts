@@ -18,3 +18,4 @@ export interface Parsed {
 }
 export declare function uriParse(uri: string): Parsed
 export declare function fibonacci(n: number): number
+export declare function noop(): void
